@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>Event handling</p>
+<input type="button" onclick="click_fun()" value="submit" id="submit">
+<input type="button" onclick="document.getElementById('submit').removeEventListener('mouseover',btn_mouse_over);" value="remove" id="remove">
+<p>Mouse over  <span id="id1" onmouseover="over_fun()" onmouseout="out_fun()">This will change color when mouse over it</span></p>
+<p id="change">To change the content</p>
+<script type="text/javascript">
+	function click_fun()
+	{
+		alert('click ok');
+		document.getElementById("submit").value="Submitted";
+		document.getElementById('change').innerText="content changed";
+		document.getElementById('change').style.color="green";
+	}
+	function over_fun()
+	{
+		document.getElementById("id1").style.color="red";
+		document.getElementById("id1").style.fontSize='18px';
+
+	}
+	function out_fun()
+	{
+		document.getElementById('id1').style.color="black";
+		document.getElementById("id1").style.fontSize='14px';
+	}
+	document.getElementById('submit').addEventListener('mouseover',btn_mouse_over);
+	document.getElementById('submit').addEventListener('mouseout',btn_mouse_out);
+	function btn_mouse_over(){
+		this.style.backgroundColor="green";
+	}
+	function btn_mouse_out(){
+		this.style.backgroundColor="white";
+	}
+	
+</script>
+</body>
+</html>
