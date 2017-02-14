@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="holder">
+	<p>Hi good morning</p>
+	<div class="holder2">
+	<p>Welcome</p></div>
+</div>
+<div class="holder3">
+	
+</div>
+<p name="tag">vs</p>
+<p name="tag">vs</p>
+<p name="tag">vs</p>
+<p name="tag1">vs</p>
+<p>The for loop : array is</p>
+<p><span id="id1"></span><span id="id2"></span><span id="id3"></span><span id="id4"></span><span id="id5"></span><span id="id6"></span><span id="id7"></span><span id="id8"></span><span id="id9"></span><span id="id10"></span></p>
+<p>By using document.write</p>
+
+<script type="text/javascript">
+	var i;
+	var a=[1,2,3,4,5,6,7,8,9,10];
+	for( i=0; i<=9; i++ )
+	{
+		document.getElementById('id'+[i+1]).innerHTML=a[i]+" ";
+		 document.write(a[i]+"<br>");
+	}
+	document.getElementsByName("tag")[0].innerHTML="to understand element by name";
+	document.getElementsByName("tag")[1].innerHTML="to understand element by name";
+	document.getElementsByName("tag")[2].innerHTML="to understand element by name";
+	document.getElementsByName("tag1")[0].innerHTML="to understand element by name";
+	document.getElementsByClassName('holder2')[0].innerHTML="class content changed";
+	document.querySelectorAll('.holder3')[0].innerHTML="querySelectorAll";
+</script>
+</body>
+</html>
