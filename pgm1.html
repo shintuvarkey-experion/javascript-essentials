@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <script src="script1.js">
+	// function function1();
+</script> -->
+
+	<title></title>
+</head>
+<body>
+<p>First Paragraph :    <span id="id1"></span></p>
+<p>second Paragraph :   <span id="id2"></span></p>
+<p>third Paragraph :  <span id="id3"></span></p>
+<p>Fourth Paragraph :  <span id="id4"></span></p>
+<p>Fifth Paragraph : <span id="id5"></span></p>
+<p>Sixth Paragraph : <span id="id6"></span></p>
+<p>Length of array: <span id="id7"></span></p>
+<p>Embed array: <span id="id8"></span></p>
+<p>2nd Embed array: <span id="id9"></span></p>
+<p>Object Example</p>
+<p>First Name: <span id="id10"></span></p>
+<p>Last Name: <span id="id11"></span></p>
+<p>Added Value: <span id="id12"></span></p>
+<p>Assign  New Value: <span id="id13"></span></p>
+<!-- <button onclick="functi1()">click</button> -->
+<script type="text/javascript">
+	var a=["hi",2,"good","morning",52+45];
+	var b=5*10+(20/5);
+	var embed= [ "start" , ["inner element",112,["2nd inner element"]],"end"];
+	var obj={ 
+		firstname:"shintu",
+		lastname:"varkey"
+	}
+	obj.added="added value";
+	document.getElementById("id1").innerHTML=a[0];
+	document.getElementById("id2").innerHTML=a[2];
+	document.getElementById("id3").innerHTML=a[3];
+	document.getElementById("id4").innerHTML=a[1];
+	document.getElementById("id5").innerHTML=b;
+	document.getElementById("id6").innerHTML=a[4];
+	document.getElementById("id7").innerHTML=a.length;
+	document.getElementById("id8").innerHTML=embed[1][0];
+	document.getElementById("id9").innerHTML=embed[1][2][0];
+	document.getElementById("id10").innerHTML=obj.firstname;
+	document.getElementById("id11").innerHTML=obj.lastname;
+	document.getElementById("id12").innerHTML=obj.added;
+	document.getElementById("id13").innerHTML=obj.added+45;
+</script>
+</body>
+</html>
