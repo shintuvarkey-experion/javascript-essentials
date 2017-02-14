@@ -1,0 +1,13 @@
+.h2new{
+	text-align: center;
+}
+#content_box{
+	background-color: blue;
+	height:100px;
+	width: 100px;
+}
+#content_para{
+	text-align: center;
+	color: white;
+
+}
