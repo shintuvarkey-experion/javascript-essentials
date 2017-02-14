@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>The constructors and prototypes</p>
+<p>apple1</p>
+<p>Name: <span id="id1"></span></p>
+<p>Weight: <span id="id2"></span></p>
+<p>Function eat in fun1: <span id="id3"></span></p>
+<p>Function throw in fun1: <span id="id4"></span></p>
+<p>apple2</p>
+<p>Name: <span id="id5"></span></p>
+<p>Weight: <span id="id6"></span></p>
+<p>Function eat in fun1: <span id="id7"></span></p>
+<p>Function throw in fun1: <span id="id8"></span></p>
+<p>apple3</p>
+<p>color in fun2: <span id="id9"></span></p>
+<script type="text/javascript">
+function Fun1() {
+	this.name="apple";
+	this.wt="100gm";
+}
+function Fun2(){
+this.color="green";
+}
+
+Fun1.prototype={
+	eat:function(){
+		return "eat it";
+	},
+	throw:function(){
+		return "throw it";
+	}
+}
+
+
+var apple1=new Fun1();
+var apple2=new Fun1();
+var apple3=new Fun2();
+document.getElementById('id1').innerHTML=apple1.name;
+document.getElementById('id2').innerHTML=apple1.wt;
+document.getElementById('id3').innerHTML=apple1.eat();
+document.getElementById('id4').innerHTML=apple1.throw();
+document.getElementById('id5').innerHTML=apple2.name;
+document.getElementById('id6').innerHTML=apple2.wt;
+document.getElementById('id7').innerHTML=apple2.eat();
+document.getElementById('id8').innerHTML=apple2.throw();
+document.getElementById('id9').innerHTML=apple3.color;
+</script>
+</body>
+</html>

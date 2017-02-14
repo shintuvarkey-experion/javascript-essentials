@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>Prototype</p>
+<p>The name : <span id="id1"></span></p>
+<p>Shared object: <span id="id3"></span></p>
+<p> inside obj Shared object: <span id="id4"></span></p>
+<p> Array element: <span id="id5"></span></p>
+<p> shared 2:  <span id="id6"></span></p>
+<script type="text/javascript">
+obj={
+	name:"apple",
+	type:"food",
+	new:"inside obj"
+	}
+obj.__proto__.new="Prototype";
+obj.__proto__.new1="eatable";
+obj2={}
+a=[];
+a.push("hello");
+	document.getElementById("id1").innerHTML=obj.name;
+	document.getElementById("id3").innerHTML=obj2.new;
+	document.getElementById("id4").innerHTML=obj.new;
+	document.getElementById("id5").innerHTML=a[0];
+	document.getElementById("id6").innerHTML=obj2.new1;
+</script>
+</body>
+</html>
